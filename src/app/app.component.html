@@ -1,0 +1,15 @@
+<div class="app">
+  <div class="row">
+    <div class="boton">Cargar Archivo</div>
+    <div class="boton" (click)="onSubmit()">Generar</div>
+    <div class="boton" (click)="guardar()">Guardar</div>
+  </div>
+  <div class="error" *ngIf="error.length > 0">{{error}}</div>  
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="contenedor">
+    <textarea name="texto1" class="contenedor-texto" formControlName="contenido"></textarea>
+    <textarea name="texto2" class="contenedor-texto" formControlName="resultado"></textarea>
+  </form>
+</div>
+
+<!--<router-outlet></router-outlet>-->
